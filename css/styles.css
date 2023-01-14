@@ -92,7 +92,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -569,4 +568,46 @@ h5 {
 }
 main {
   background-color: var(--secondary-color);
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  left: 536px;
+  top: 221px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.close-btn {
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  left: 490px;
+  top: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.ex {
+  position: absolute;
+  left: 22.23%;
+  top: 16.67%;
+}
+.backdrop {
+  position: absolute;
+  width: 1600px;
+  height: 1024px;
+  left: 5px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.2);
 }
