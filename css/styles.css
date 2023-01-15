@@ -36,6 +36,8 @@ body {
   line-height: 1.17;
   font-family: var(--alternative-font-family);
   text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mainlogo:hover,
 .mainlogo:focus {
@@ -47,6 +49,8 @@ body {
   font-size: 14px;
   line-height: 1.17;
   text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-header:hover,
@@ -59,6 +63,8 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contact2 {
   color: var(--alternative-color);
@@ -67,6 +73,8 @@ body {
   font-size: 14px;
   line-height: 1.17;
   width: 110px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-contact2:hover,
@@ -175,6 +183,8 @@ body {
   font-style: normal;
   text-decoration: none;
   width: 145px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-logo:hover,
 .footer-logo:focus {
@@ -195,6 +205,8 @@ body {
   font-size: 14px;
   line-height: 1.71;
   margin: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-info:hover,
 .footer-info:focus {
@@ -209,6 +221,8 @@ body {
   padding: 6px 22px;
   border: 0px solid;
   border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-portfolio:hover,
@@ -285,13 +299,18 @@ ul {
 .card {
   flex-basis: calc((100% - 2 * 30px) / 3);
   border-bottom: 1px solid #eeeeee;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .buttons-portfolio {
   width: 572px;
   display: flex;
   gap: 8px;
   margin-bottom: 34px;
   margin-top: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-link2 {
   gap: 46px;
@@ -478,6 +497,8 @@ h5 {
   border-radius: 4px;
   display: flex;
   justify-content: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ourclients-headline {
   margin-top: 0;
@@ -515,7 +536,8 @@ h5 {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
-.mail-header:hover svg {
+.mail-header:hover svg,
+.mail-header:focus svg {
   fill: var(--logo-web-color);
 }
 .phone-header:hover svg {
@@ -538,23 +560,12 @@ h5 {
   justify-content: center;
   fill: white;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons-items:hover {
   background-color: var(--logo-web-color);
-}
-.media-icons {
-  fill: #afb1b8;
-  width: 44px;
-  height: 44px;
-  border: 1px;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-}
-.media-icons:hover {
-  background-color: #2196f3;
-  fill: var(--secondary-color);
 }
 .media-icons {
   display: flex;
@@ -565,7 +576,14 @@ h5 {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.media-icons:hover {
+  background-color: #2196f3;
+  fill: var(--secondary-color);
+}
+
 main {
   background-color: var(--secondary-color);
 }
@@ -574,18 +592,20 @@ main {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+  transition-property: visibility, opacity;
+  transition-duration: 5s;
 }
 
 .modal {
   position: absolute;
   width: 528px;
   height: 581px;
-  left: 536px;
-  top: 221px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  opacity: 1;
+  visibility: visible;
 }
 .close-btn {
   position: absolute;
@@ -605,9 +625,55 @@ main {
 }
 .backdrop {
   position: absolute;
-  width: 1600px;
-  height: 1024px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
   left: 5px;
   top: 0px;
   background: rgba(0, 0, 0, 0.2);
+}
+.label {
+  width: 370px;
+  height: 70px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+.aboutus-img {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+.overlay-card {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  padding: 49px 45px 49px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--secondary-color);
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+}
+.card:hover .overlay-card {
+  transform: translatey(0);
+}
+.box {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
 }
