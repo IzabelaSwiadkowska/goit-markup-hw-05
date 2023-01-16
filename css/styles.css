@@ -452,9 +452,12 @@ ul {
 }
 .feature {
   display: flex;
+  width: 270px;
+  height: 120px;
   justify-content: center;
   background-color: var(--third-background-color);
   border-radius: 4px;
+  align-items: center;
 }
 .socials {
   display: flex;
@@ -493,12 +496,10 @@ h5 {
 .examples-items {
   fill: var(--color-filler);
   width: 170px;
-  border: 1px solid #afb1b8;
   border-radius: 4px;
   display: flex;
   justify-content: center;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cursormovein 0.5s forwards;
 }
 .ourclients-headline {
   margin-top: 0;
@@ -544,8 +545,7 @@ h5 {
   fill: var(--logo-web-color);
 }
 .examples-items:hover svg {
-  fill: var(--logo-web-color);
-  border: 1px solid var(--logo-web-color);
+  animation: cursormoveout 0.5s forwards;
 }
 .klickme {
   fill: #757575;
@@ -592,8 +592,6 @@ main {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transition-property: visibility, opacity, transform;
-  transition-duration: 3s;
   transform: scale(0);
 }
 
@@ -635,6 +633,8 @@ main {
   left: 5px;
   top: 0px;
   background: rgba(0, 0, 0, 0.2);
+  transition-property: visibility, opacity, transform;
+  transition-duration: 1s;
 }
 .label {
   width: 370px;
@@ -708,4 +708,24 @@ main {
   background-color: var(--logo-web-color);
   border-radius: 2px;
   margin-top: 28px;
+}
+@keyframes cursormoveout {
+  from {
+    fill: #afb1b8;
+    border: 1px solid #afb1b8;
+  }
+  to {
+    fill: #2196f3;
+    border: 1px solid #2196f3;
+  }
+}
+@keyframes cursormovein {
+  from {
+    fill: #2196f3;
+    border: 1px solid #2196f3;
+  }
+  to {
+    fill: #afb1b8;
+    border: 1px solid #afb1b8;
+  }
 }
